@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ch07"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" SourceInitialized="Window_SourceInitialized">
     <StackPanel>
         <TextBlock TextWrapping="Wrap" Text="请选择某个例子，然后单击确定按钮" />
         <Separator />

@@ -52,5 +52,13 @@ namespace ch07
             w.Owner = this;
             w.ShowDialog();
         }
+
+        private void Window_SourceInitialized(object sender, EventArgs e)
+        {
+//            var login=new LoginWindow();
+//            login.ShowDialog();
+//            this.Title = "欢迎您, " + login.UserName;
+        
+        }
     }
 }
