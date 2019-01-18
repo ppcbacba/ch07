@@ -6,7 +6,29 @@
         xmlns:local="clr-namespace:ch07"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <StackPanel>
+        <TextBlock TextWrapping="Wrap" Text="请选择某个例子，然后单击确定按钮" />
+        <Separator />
+        <WrapPanel Name="WrapPanel1">
+            <WrapPanel.Resources>
+                <Style TargetType="RadioButton">
+                    <Setter Property="Margin" Value="10" />
+                    <EventSetter Event="Checked" Handler="RadioButton_Checked" />
+                </Style>
+            </WrapPanel.Resources>
+            <RadioButton Content="HelloWorld" />
+            <RadioButton Content="MessageBox" />
+            <RadioButton Content="DialogBox" />
+            <RadioButton Content="PageExample1" />
+            <RadioButton Content="PageExample2" />
+            <RadioButton Content="PageExample3" />
+            <RadioButton Content="RectangleExample" />
+            <RadioButton Content="SampleStyleExample" />
+            <RadioButton Content="MouseEventExample" />
+            <RadioButton Content="KeyboardEventExample" />
+
+        </WrapPanel>
+        <Separator/>
+        <Button Content="确定" Width="60" Margin="0 10 20 10" HorizontalAlignment="Right" Click="Button_OnClick"/>
+    </StackPanel>
 </Window>

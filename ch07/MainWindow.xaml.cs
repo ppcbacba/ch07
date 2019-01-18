@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ch07.Examples;
 
 namespace ch07
 {
@@ -23,6 +24,33 @@ namespace ch07
         public MainWindow()
         {
             InitializeComponent();
+        }
+        private RadioButton rb = null;
+
+        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            rb = e.Source as RadioButton;
+        }
+
+        private void Button_OnClick(object sender, RoutedEventArgs e)
+        {
+            if (rb == null)
+            {
+                MessageBox.Show("请先选择一个例子", "提示", MessageBoxButton.OK, MessageBoxImage.Information);
+                return;
+            }
+
+            string content = rb.Content.ToString();
+            Window w = null;
+            switch (content)
+            {
+                case "HelloWorld":
+                    w = new HelloWorldWindow();
+                    break;
+            }
+            if (w == null) return;
+            w.Owner = this;
+            w.ShowDialog();
         }
     }
 }

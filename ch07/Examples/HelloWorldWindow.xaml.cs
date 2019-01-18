@@ -24,14 +24,6 @@ namespace ch07.Examples
             InitializeComponent();
         }
 
-        private void RadioButton_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_OnClick(object sender, RoutedEventArgs e)
-        {
-            throw new NotImplementedException();
-        }
+      
     }
 }
