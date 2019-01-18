@@ -1,0 +1,36 @@
+﻿<Window x:Class="ch07.Examples.HelloWorldWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ch07.Examples"
+        mc:Ignorable="d"
+        Title="HelloWorldWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+
+    <StackPanel>
+        <Label Content="Hello World!" HorizontalAlignment="Left" Margin="277,0,0,0" VerticalAlignment="Top" />
+        <TextBlock TextWrapping="Wrap" Text="请选择某个例子，然后单击确定按钮" />
+        <Separator />
+        <WrapPanel Name="WrapPanel1">
+            <WrapPanel.Resources>
+                <Style TargetType="RadioButton">
+                    <Setter Property="Margin" Value="10" />
+                    <EventSetter Event="Checked" Handler="RadioButton_Checked" />
+                </Style>
+            </WrapPanel.Resources>
+            <RadioButton Content="HelloWorld" />
+            <RadioButton Content="MessageBox" />
+            <RadioButton Content="DialogBox" />
+            <RadioButton Content="PageExample1" />
+            <RadioButton Content="PageExample2" />
+            <RadioButton Content="PageExample3" />
+            <RadioButton Content="RectangleExample" />
+            <RadioButton Content="SampleStyleExample" />
+            <RadioButton Content="MouseEventExample" />
+            <RadioButton Content="KeyboardEventExample" />
+
+        </WrapPanel>
+        <Separator/>
+        <Button Content="确定" Width="60" Margin="0 10 20 10" HorizontalAlignment="Right" Click="Button_OnClick"/>
+    </StackPanel>
+</Window>
